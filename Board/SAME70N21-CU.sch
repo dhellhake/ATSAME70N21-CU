@@ -11638,12 +11638,12 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="+3V10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="+3V9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X20" device="" package3d_urn="urn:adsk.eagle:package:22443/2"/>
-<part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X20" device="" package3d_urn="urn:adsk.eagle:package:22443/2"/>
 <part name="U1" library="u_mcu_atmel_atsame70n21_lqfp100" deviceset="ATSAME70N21A-AN" device="TQFP100_14X14MC_MCH-M"/>
+<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X20" device="" package3d_urn="urn:adsk.eagle:package:22443/2"/>
+<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="+3V9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11865,17 +11865,11 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <instance part="GND15" gate="1" x="50.8" y="124.46" smashed="yes">
 <attribute name="VALUE" x="48.26" y="121.92" size="1.778" layer="96"/>
 </instance>
-<instance part="P+7" gate="1" x="45.72" y="193.04" smashed="yes">
-<attribute name="VALUE" x="48.26" y="195.58" size="1.778" layer="96" rot="R180"/>
+<instance part="P+7" gate="1" x="45.72" y="121.92" smashed="yes">
+<attribute name="VALUE" x="48.26" y="124.46" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="+3V10" gate="G$1" x="58.42" y="193.04" smashed="yes">
-<attribute name="VALUE" x="60.96" y="195.58" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="P+6" gate="1" x="45.72" y="116.84" smashed="yes">
-<attribute name="VALUE" x="43.18" y="111.76" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="+3V9" gate="G$1" x="55.88" y="116.84" smashed="yes">
-<attribute name="VALUE" x="53.34" y="111.76" size="1.778" layer="96" rot="R90"/>
+<instance part="+3V10" gate="G$1" x="58.42" y="121.92" smashed="yes">
+<attribute name="VALUE" x="60.96" y="124.46" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND14" gate="1" x="53.34" y="45.72" smashed="yes">
 <attribute name="VALUE" x="50.8" y="43.18" size="1.778" layer="96"/>
@@ -11884,11 +11878,17 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <attribute name="NAME" x="44.45" y="183.515" size="1.778" layer="95"/>
 <attribute name="VALUE" x="44.45" y="127" size="1.778" layer="96"/>
 </instance>
-<instance part="JP3" gate="A" x="50.8" y="81.28" smashed="yes">
-<attribute name="NAME" x="44.45" y="107.315" size="1.778" layer="95"/>
-<attribute name="VALUE" x="44.45" y="50.8" size="1.778" layer="96"/>
-</instance>
 <instance part="U1" gate="A" x="203.2" y="190.5" smashed="yes"/>
+<instance part="JP1" gate="A" x="50.8" y="86.36" smashed="yes">
+<attribute name="NAME" x="44.45" y="112.395" size="1.778" layer="95"/>
+<attribute name="VALUE" x="44.45" y="55.88" size="1.778" layer="96"/>
+</instance>
+<instance part="P+6" gate="1" x="45.72" y="193.04" smashed="yes">
+<attribute name="VALUE" x="48.26" y="195.58" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="+3V9" gate="G$1" x="58.42" y="193.04" smashed="yes">
+<attribute name="VALUE" x="60.96" y="195.58" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -12016,30 +12016,30 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <junction x="86.36" y="243.84"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="3"/>
-<wire x1="48.26" y1="101.6" x2="40.64" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="101.6" x2="40.64" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="111.76" x2="55.88" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="111.76" x2="63.5" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="111.76" x2="63.5" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="A" pin="4"/>
-<wire x1="63.5" y1="101.6" x2="55.88" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="+3V9" gate="G$1" pin="+3V3"/>
-<wire x1="55.88" y1="111.76" x2="55.88" y2="114.3" width="0.1524" layer="91"/>
-<junction x="55.88" y="111.76"/>
+<wire x1="40.64" y1="106.68" x2="40.64" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="116.84" x2="58.42" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="116.84" x2="63.5" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="116.84" x2="63.5" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="+3V10" gate="G$1" pin="+3V3"/>
+<wire x1="58.42" y1="116.84" x2="58.42" y2="119.38" width="0.1524" layer="91"/>
+<junction x="58.42" y="116.84"/>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="63.5" y1="106.68" x2="55.88" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="40.64" y1="106.68" x2="48.26" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="3"/>
-<wire x1="48.26" y1="177.8" x2="40.64" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="177.8" x2="40.64" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="187.96" x2="58.42" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="187.96" x2="63.5" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="187.96" x2="63.5" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="4"/>
-<wire x1="63.5" y1="177.8" x2="55.88" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="+3V10" gate="G$1" pin="+3V3"/>
+<pinref part="+3V9" gate="G$1" pin="+3V3"/>
 <wire x1="58.42" y1="187.96" x2="58.42" y2="190.5" width="0.1524" layer="91"/>
 <junction x="58.42" y="187.96"/>
+<pinref part="JP2" gate="A" pin="3"/>
+<wire x1="40.64" y1="177.8" x2="48.26" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="4"/>
+<wire x1="63.5" y1="177.8" x2="55.88" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -12272,25 +12272,22 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <junction x="86.36" y="231.14"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="39"/>
-<wire x1="48.26" y1="55.88" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="55.88" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="50.8" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="50.8" x2="60.96" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="50.8" x2="60.96" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="A" pin="40"/>
-<wire x1="60.96" y1="55.88" x2="55.88" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="50.8" x2="60.96" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GND"/>
 <wire x1="53.34" y1="50.8" x2="53.34" y2="48.26" width="0.1524" layer="91"/>
-<junction x="53.34" y="50.8"/>
-<pinref part="JP3" gate="A" pin="37"/>
-<wire x1="48.26" y1="58.42" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="58.42" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
-<junction x="43.18" y="55.88"/>
-<pinref part="JP3" gate="A" pin="38"/>
-<wire x1="55.88" y1="58.42" x2="60.96" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="58.42" x2="60.96" y2="55.88" width="0.1524" layer="91"/>
-<junction x="60.96" y="55.88"/>
+<wire x1="55.88" y1="60.96" x2="60.96" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="63.5" x2="60.96" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="63.5" x2="60.96" y2="60.96" width="0.1524" layer="91"/>
+<junction x="60.96" y="60.96"/>
+<pinref part="JP1" gate="A" pin="38"/>
+<pinref part="JP1" gate="A" pin="40"/>
+<pinref part="JP1" gate="A" pin="37"/>
+<wire x1="55.88" y1="63.5" x2="48.26" y2="63.5" width="0.1524" layer="91"/>
+<junction x="55.88" y="63.5"/>
+<pinref part="JP1" gate="A" pin="39"/>
+<wire x1="55.88" y1="60.96" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
+<junction x="55.88" y="60.96"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="39"/>
@@ -12457,30 +12454,30 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <junction x="261.62" y="243.84"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="1"/>
-<wire x1="48.26" y1="104.14" x2="43.18" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="104.14" x2="43.18" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="109.22" x2="45.72" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="109.22" x2="60.96" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="109.22" x2="60.96" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="A" pin="2"/>
-<wire x1="60.96" y1="104.14" x2="55.88" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="P+6" gate="1" pin="+5V"/>
-<wire x1="45.72" y1="109.22" x2="45.72" y2="114.3" width="0.1524" layer="91"/>
-<junction x="45.72" y="109.22"/>
+<wire x1="43.18" y1="109.22" x2="43.18" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="114.3" x2="45.72" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="114.3" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="114.3" x2="60.96" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="P+7" gate="1" pin="+5V"/>
+<wire x1="45.72" y1="114.3" x2="45.72" y2="119.38" width="0.1524" layer="91"/>
+<junction x="45.72" y="114.3"/>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="43.18" y1="109.22" x2="48.26" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="60.96" y1="109.22" x2="55.88" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="1"/>
-<wire x1="48.26" y1="180.34" x2="43.18" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="180.34" x2="43.18" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="185.42" x2="45.72" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="185.42" x2="60.96" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="185.42" x2="60.96" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="2"/>
-<wire x1="60.96" y1="180.34" x2="55.88" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="P+7" gate="1" pin="+5V"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
 <wire x1="45.72" y1="185.42" x2="45.72" y2="190.5" width="0.1524" layer="91"/>
 <junction x="45.72" y="185.42"/>
+<pinref part="JP2" gate="A" pin="1"/>
+<wire x1="43.18" y1="180.34" x2="48.26" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="2"/>
+<wire x1="60.96" y1="180.34" x2="55.88" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HSDM" class="0">
@@ -12665,9 +12662,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD0"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="175.26" x2="17.78" y2="175.26" width="0.1524" layer="91"/>
-<label x="17.78" y="175.26" size="1.778" layer="95"/>
-<pinref part="JP2" gate="A" pin="5"/>
+<pinref part="JP2" gate="A" pin="6"/>
+<wire x1="55.88" y1="175.26" x2="83.82" y2="175.26" width="0.1524" layer="91"/>
+<label x="81.28" y="175.26" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD31" class="0">
@@ -12677,9 +12674,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD31"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="175.26" x2="86.36" y2="175.26" width="0.1524" layer="91"/>
-<label x="86.36" y="175.26" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP2" gate="A" pin="6"/>
+<pinref part="JP2" gate="A" pin="5"/>
+<wire x1="48.26" y1="175.26" x2="17.78" y2="175.26" width="0.1524" layer="91"/>
+<label x="20.32" y="175.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PB1" class="0">
@@ -12713,9 +12710,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA20"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="170.18" x2="17.78" y2="170.18" width="0.1524" layer="91"/>
-<label x="17.78" y="170.18" size="1.778" layer="95"/>
-<pinref part="JP2" gate="A" pin="9"/>
+<pinref part="JP2" gate="A" pin="10"/>
+<wire x1="55.88" y1="170.18" x2="86.36" y2="170.18" width="0.1524" layer="91"/>
+<label x="83.82" y="170.18" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA19" class="0">
@@ -12725,9 +12722,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA19"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="170.18" x2="86.36" y2="170.18" width="0.1524" layer="91"/>
-<label x="86.36" y="170.18" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP2" gate="A" pin="10"/>
+<pinref part="JP2" gate="A" pin="9"/>
+<wire x1="48.26" y1="170.18" x2="17.78" y2="170.18" width="0.1524" layer="91"/>
+<label x="20.32" y="170.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA18" class="0">
@@ -12737,9 +12734,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA18"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="167.64" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
-<label x="17.78" y="167.64" size="1.778" layer="95"/>
-<pinref part="JP2" gate="A" pin="11"/>
+<pinref part="JP2" gate="A" pin="12"/>
+<wire x1="55.88" y1="167.64" x2="86.36" y2="167.64" width="0.1524" layer="91"/>
+<label x="83.82" y="167.64" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA17" class="0">
@@ -12749,9 +12746,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA17"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="167.64" x2="86.36" y2="167.64" width="0.1524" layer="91"/>
-<label x="86.36" y="167.64" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP2" gate="A" pin="12"/>
+<pinref part="JP2" gate="A" pin="11"/>
+<wire x1="48.26" y1="167.64" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
+<label x="20.32" y="167.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA10" class="0">
@@ -12773,9 +12770,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA1"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="78.74" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
-<label x="17.78" y="78.74" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="21"/>
+<pinref part="JP1" gate="A" pin="26"/>
+<wire x1="55.88" y1="78.74" x2="83.82" y2="78.74" width="0.1524" layer="91"/>
+<label x="81.28" y="78.74" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA0" class="0">
@@ -12785,9 +12782,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA0"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="81.28" x2="17.78" y2="81.28" width="0.1524" layer="91"/>
-<label x="17.78" y="81.28" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="19"/>
+<pinref part="JP1" gate="A" pin="24"/>
+<wire x1="55.88" y1="81.28" x2="86.36" y2="81.28" width="0.1524" layer="91"/>
+<label x="86.36" y="81.28" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA13" class="0">
@@ -12797,9 +12794,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA13"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="160.02" x2="86.36" y2="160.02" width="0.1524" layer="91"/>
-<label x="86.36" y="160.02" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP2" gate="A" pin="18"/>
+<pinref part="JP2" gate="A" pin="17"/>
+<wire x1="48.26" y1="160.02" x2="17.78" y2="160.02" width="0.1524" layer="91"/>
+<label x="20.32" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA11" class="0">
@@ -12833,9 +12830,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA21"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="165.1" x2="17.78" y2="165.1" width="0.1524" layer="91"/>
-<label x="17.78" y="165.1" size="1.778" layer="95"/>
-<pinref part="JP2" gate="A" pin="13"/>
+<pinref part="JP2" gate="A" pin="14"/>
+<wire x1="55.88" y1="165.1" x2="86.36" y2="165.1" width="0.1524" layer="91"/>
+<label x="83.82" y="165.1" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA16" class="0">
@@ -12845,9 +12842,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA16"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="157.48" x2="17.78" y2="157.48" width="0.1524" layer="91"/>
-<label x="17.78" y="157.48" size="1.778" layer="95"/>
-<pinref part="JP2" gate="A" pin="19"/>
+<pinref part="JP2" gate="A" pin="20"/>
+<wire x1="55.88" y1="157.48" x2="86.36" y2="157.48" width="0.1524" layer="91"/>
+<label x="83.82" y="157.48" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA15" class="0">
@@ -12881,9 +12878,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA2"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="76.2" x2="17.78" y2="76.2" width="0.1524" layer="91"/>
-<label x="17.78" y="76.2" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="23"/>
+<pinref part="JP1" gate="A" pin="28"/>
+<wire x1="55.88" y1="76.2" x2="83.82" y2="76.2" width="0.1524" layer="91"/>
+<label x="81.28" y="76.2" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA22" class="0">
@@ -12893,9 +12890,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA22"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="160.02" x2="17.78" y2="160.02" width="0.1524" layer="91"/>
-<label x="17.78" y="160.02" size="1.778" layer="95"/>
-<pinref part="JP2" gate="A" pin="17"/>
+<pinref part="JP2" gate="A" pin="18"/>
+<wire x1="55.88" y1="160.02" x2="86.36" y2="160.02" width="0.1524" layer="91"/>
+<label x="83.82" y="160.02" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA23" class="0">
@@ -12905,9 +12902,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA23"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="157.48" x2="86.36" y2="157.48" width="0.1524" layer="91"/>
-<label x="86.36" y="157.48" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP2" gate="A" pin="20"/>
+<pinref part="JP2" gate="A" pin="19"/>
+<wire x1="48.26" y1="157.48" x2="17.78" y2="157.48" width="0.1524" layer="91"/>
+<label x="20.32" y="157.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA24" class="0">
@@ -12929,9 +12926,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA5"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="66.04" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
-<label x="86.36" y="66.04" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="32"/>
+<pinref part="JP1" gate="A" pin="35"/>
+<wire x1="48.26" y1="66.04" x2="20.32" y2="66.04" width="0.1524" layer="91"/>
+<label x="22.86" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA4" class="0">
@@ -12941,9 +12938,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA4"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="68.58" x2="17.78" y2="68.58" width="0.1524" layer="91"/>
-<label x="17.78" y="68.58" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="29"/>
+<pinref part="JP1" gate="A" pin="34"/>
+<wire x1="55.88" y1="68.58" x2="83.82" y2="68.58" width="0.1524" layer="91"/>
+<label x="81.28" y="68.58" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA3" class="0">
@@ -12953,9 +12950,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA3"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="76.2" x2="86.36" y2="76.2" width="0.1524" layer="91"/>
-<label x="86.36" y="76.2" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="24"/>
+<pinref part="JP1" gate="A" pin="27"/>
+<wire x1="48.26" y1="76.2" x2="20.32" y2="76.2" width="0.1524" layer="91"/>
+<label x="22.86" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA7" class="0">
@@ -12965,9 +12962,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA7"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="162.56" x2="17.78" y2="162.56" width="0.1524" layer="91"/>
-<label x="17.78" y="162.56" size="1.778" layer="95"/>
-<pinref part="JP2" gate="A" pin="15"/>
+<pinref part="JP2" gate="A" pin="16"/>
+<wire x1="55.88" y1="162.56" x2="83.82" y2="162.56" width="0.1524" layer="91"/>
+<label x="81.28" y="162.56" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA8" class="0">
@@ -12977,9 +12974,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA8"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="162.56" x2="86.36" y2="162.56" width="0.1524" layer="91"/>
-<label x="86.36" y="162.56" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP2" gate="A" pin="16"/>
+<pinref part="JP2" gate="A" pin="15"/>
+<wire x1="48.26" y1="162.56" x2="20.32" y2="162.56" width="0.1524" layer="91"/>
+<label x="22.86" y="162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PA9" class="0">
@@ -12989,9 +12986,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PA9"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="68.58" x2="86.36" y2="68.58" width="0.1524" layer="91"/>
-<label x="86.36" y="68.58" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="30"/>
+<pinref part="JP1" gate="A" pin="33"/>
+<wire x1="48.26" y1="68.58" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
+<label x="22.86" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PB12" class="0">
@@ -13001,9 +12998,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PB12"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="73.66" x2="86.36" y2="73.66" width="0.1524" layer="91"/>
-<label x="86.36" y="73.66" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="26"/>
+<pinref part="JP1" gate="A" pin="29"/>
+<wire x1="48.26" y1="73.66" x2="17.78" y2="73.66" width="0.1524" layer="91"/>
+<label x="20.32" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PB4" class="0">
@@ -13015,7 +13012,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="55.88" y1="83.82" x2="86.36" y2="83.82" width="0.1524" layer="91"/>
 <label x="86.36" y="83.82" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="18"/>
+<pinref part="JP1" gate="A" pin="22"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PB5" class="0">
@@ -13025,9 +13022,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PB5"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="86.36" x2="86.36" y2="86.36" width="0.1524" layer="91"/>
-<label x="86.36" y="86.36" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="16"/>
+<pinref part="JP1" gate="A" pin="19"/>
+<wire x1="48.26" y1="86.36" x2="20.32" y2="86.36" width="0.1524" layer="91"/>
+<label x="22.86" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PB13" class="0">
@@ -13039,7 +13036,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="48.26" y1="99.06" x2="17.78" y2="99.06" width="0.1524" layer="91"/>
 <label x="17.78" y="99.06" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="5"/>
+<pinref part="JP1" gate="A" pin="9"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PB9" class="0">
@@ -13051,7 +13048,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="55.88" y1="99.06" x2="86.36" y2="99.06" width="0.1524" layer="91"/>
 <label x="86.36" y="99.06" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="6"/>
+<pinref part="JP1" gate="A" pin="10"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD1" class="0">
@@ -13063,7 +13060,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="48.26" y1="96.52" x2="17.78" y2="96.52" width="0.1524" layer="91"/>
 <label x="17.78" y="96.52" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="7"/>
+<pinref part="JP1" gate="A" pin="11"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD30" class="0">
@@ -13073,9 +13070,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD30"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="165.1" x2="86.36" y2="165.1" width="0.1524" layer="91"/>
-<label x="86.36" y="165.1" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP2" gate="A" pin="14"/>
+<pinref part="JP2" gate="A" pin="13"/>
+<wire x1="48.26" y1="165.1" x2="17.78" y2="165.1" width="0.1524" layer="91"/>
+<label x="20.32" y="165.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD27" class="0">
@@ -13193,9 +13190,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD17"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="66.04" x2="17.78" y2="66.04" width="0.1524" layer="91"/>
-<label x="17.78" y="66.04" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="31"/>
+<pinref part="JP1" gate="A" pin="36"/>
+<wire x1="55.88" y1="66.04" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
+<label x="83.82" y="66.04" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD16" class="0">
@@ -13205,9 +13202,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD16"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
-<label x="86.36" y="71.12" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="28"/>
+<pinref part="JP1" gate="A" pin="31"/>
+<wire x1="48.26" y1="71.12" x2="17.78" y2="71.12" width="0.1524" layer="91"/>
+<label x="20.32" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD14" class="0">
@@ -13217,9 +13214,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD14"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="71.12" x2="17.78" y2="71.12" width="0.1524" layer="91"/>
-<label x="17.78" y="71.12" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="27"/>
+<pinref part="JP1" gate="A" pin="32"/>
+<wire x1="55.88" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
+<label x="83.82" y="71.12" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD13" class="0">
@@ -13229,9 +13226,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD13"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="73.66" x2="17.78" y2="73.66" width="0.1524" layer="91"/>
-<label x="17.78" y="73.66" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="25"/>
+<pinref part="JP1" gate="A" pin="30"/>
+<wire x1="55.88" y1="73.66" x2="86.36" y2="73.66" width="0.1524" layer="91"/>
+<label x="83.82" y="73.66" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD11" class="0">
@@ -13241,9 +13238,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD11"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="78.74" x2="86.36" y2="78.74" width="0.1524" layer="91"/>
-<label x="86.36" y="78.74" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="22"/>
+<pinref part="JP1" gate="A" pin="25"/>
+<wire x1="48.26" y1="78.74" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
+<label x="20.32" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD10" class="0">
@@ -13253,9 +13250,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD10"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="81.28" x2="86.36" y2="81.28" width="0.1524" layer="91"/>
-<label x="86.36" y="81.28" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="20"/>
+<pinref part="JP1" gate="A" pin="23"/>
+<wire x1="48.26" y1="81.28" x2="17.78" y2="81.28" width="0.1524" layer="91"/>
+<label x="17.78" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD15" class="0">
@@ -13267,7 +13264,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="48.26" y1="83.82" x2="17.78" y2="83.82" width="0.1524" layer="91"/>
 <label x="17.78" y="83.82" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="17"/>
+<pinref part="JP1" gate="A" pin="21"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD9" class="0">
@@ -13277,9 +13274,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD9"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="86.36" x2="17.78" y2="86.36" width="0.1524" layer="91"/>
-<label x="17.78" y="86.36" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="15"/>
+<pinref part="JP1" gate="A" pin="20"/>
+<wire x1="55.88" y1="86.36" x2="83.82" y2="86.36" width="0.1524" layer="91"/>
+<label x="81.28" y="86.36" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD8" class="0">
@@ -13289,9 +13286,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD8"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="88.9" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
-<label x="86.36" y="88.9" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="14"/>
+<pinref part="JP1" gate="A" pin="17"/>
+<wire x1="48.26" y1="88.9" x2="17.78" y2="88.9" width="0.1524" layer="91"/>
+<label x="17.78" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD7" class="0">
@@ -13301,9 +13298,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <pinref part="U1" gate="A" pin="PD7"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="88.9" x2="17.78" y2="88.9" width="0.1524" layer="91"/>
-<label x="17.78" y="88.9" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="13"/>
+<pinref part="JP1" gate="A" pin="18"/>
+<wire x1="55.88" y1="88.9" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
+<label x="86.36" y="88.9" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD6" class="0">
@@ -13315,7 +13312,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="55.88" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
 <label x="86.36" y="91.44" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="12"/>
+<pinref part="JP1" gate="A" pin="16"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD5" class="0">
@@ -13327,7 +13324,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="48.26" y1="91.44" x2="17.78" y2="91.44" width="0.1524" layer="91"/>
 <label x="17.78" y="91.44" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="11"/>
+<pinref part="JP1" gate="A" pin="15"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD4" class="0">
@@ -13339,7 +13336,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="55.88" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
 <label x="86.36" y="93.98" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="10"/>
+<pinref part="JP1" gate="A" pin="14"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD3" class="0">
@@ -13351,7 +13348,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="48.26" y1="93.98" x2="17.78" y2="93.98" width="0.1524" layer="91"/>
 <label x="17.78" y="93.98" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="9"/>
+<pinref part="JP1" gate="A" pin="13"/>
 </segment>
 </net>
 <net name="ATSAME70N21_PD2" class="0">
@@ -13363,7 +13360,7 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <segment>
 <wire x1="55.88" y1="96.52" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
 <label x="86.36" y="96.52" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="JP3" gate="A" pin="8"/>
+<pinref part="JP1" gate="A" pin="12"/>
 </segment>
 </net>
 <net name="CAN1H" class="0">
@@ -13373,9 +13370,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <label x="360.68" y="114.3" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="33"/>
-<wire x1="48.26" y1="63.5" x2="35.56" y2="63.5" width="0.1524" layer="91"/>
-<label x="35.56" y="63.5" size="1.778" layer="95"/>
+<wire x1="55.88" y1="104.14" x2="68.58" y2="104.14" width="0.1524" layer="91"/>
+<label x="66.04" y="104.14" size="1.778" layer="95" align="bottom-right"/>
+<pinref part="JP1" gate="A" pin="6"/>
 </segment>
 </net>
 <net name="CAN1L" class="0">
@@ -13385,9 +13382,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <label x="360.68" y="111.76" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="35"/>
-<wire x1="48.26" y1="60.96" x2="35.56" y2="60.96" width="0.1524" layer="91"/>
-<label x="35.56" y="60.96" size="1.778" layer="95"/>
+<wire x1="48.26" y1="104.14" x2="35.56" y2="104.14" width="0.1524" layer="91"/>
+<label x="38.1" y="104.14" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="5"/>
 </segment>
 </net>
 <net name="CAN0H" class="0">
@@ -13397,9 +13394,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <label x="149.86" y="152.4" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="34"/>
-<wire x1="55.88" y1="63.5" x2="68.58" y2="63.5" width="0.1524" layer="91"/>
-<label x="68.58" y="63.5" size="1.778" layer="95" align="bottom-right"/>
+<wire x1="55.88" y1="101.6" x2="68.58" y2="101.6" width="0.1524" layer="91"/>
+<label x="66.04" y="101.6" size="1.778" layer="95" align="bottom-right"/>
+<pinref part="JP1" gate="A" pin="8"/>
 </segment>
 </net>
 <net name="CAN0L" class="0">
@@ -13409,9 +13406,9 @@ Source: &lt;a href="http://rohmfs.rohm.com/en/products/databook/datasheet/ic/pow
 <label x="149.86" y="149.86" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="36"/>
-<wire x1="55.88" y1="60.96" x2="68.58" y2="60.96" width="0.1524" layer="91"/>
-<label x="68.58" y="60.96" size="1.778" layer="95" align="bottom-right"/>
+<wire x1="48.26" y1="101.6" x2="35.56" y2="101.6" width="0.1524" layer="91"/>
+<label x="38.1" y="101.6" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="7"/>
 </segment>
 </net>
 </nets>
